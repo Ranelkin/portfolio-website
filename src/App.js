@@ -9,15 +9,14 @@ const App = () => {
 
   
   return (
-    <div className="min-h-screen bg-gray-50 scroll-smooth">
-      <nav className="fixed w-full bg-white shadow-sm">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 scroll-smooth">
+      <nav className="fixed w-full bg-white/80 backdrop-blur-sm shadow-lg">
         <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 className="text-xl font-bold">Ranel Karimov</h1>
+          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ranel Karimov</h1>
           <div className="flex gap-6">
-            <a href="#projekte" className="hover:text-blue-600">Projekte</a>
-            <a href="#leistungen" className="hover:text-blue-600">Leistungen</a>
-            <a href="#erfahrung" className="hover:text-blue-600">Erfahrung</a>
-            <a href="#kontakt" className="hover:text-blue-600">Kontakt</a>
+            {['projekte', 'leistungen', 'erfahrung', 'kontakt'].map(item => (
+              <a href={`#${item}`} className="relative hover:text-blue-600 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">{item}</a>
+            ))}
           </div>
         </div>
       </nav>
@@ -55,28 +54,25 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projekte" className="py-16 bg-gray-50">
+        <section id="projekte" className="py-16 bg-white/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-8">Aktuelle Projekte</h3>
+            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Aktuelle Projekte</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Project 
-              title="Lernplattform für Datenbanken" 
-              description="Eine open-source interaktive Plattform zum Erlernen moderner Datenbankparadigmen. Entwickelt mit React und JavaScript." 
-              technologies={["React", "JavaScript"]} 
-              link="https://github.com/VaneMeyer/nosqlconcepts" />
-              <Project 
-              title="Portfolio Website" 
-              description="Moderne, responsive Portfolio-Website mit React und Tailwind CSS. Open Source als Referenz für andere Entwickler." 
-              technologies={["React", "JavaScript", "Tailwind"]} 
-              link="https://github.com/Ranelkin/portfolio-website" 
-            />
+              <Project title="Lernplattform für Datenbanken" 
+                description="Eine open-source interaktive Plattform zum Erlernen moderner Datenbankparadigmen. Entwickelt mit React und JavaScript." 
+                technologies={["React", "JavaScript"]} 
+                link="https://github.com/VaneMeyer/nosqlconcepts" />
+              <Project title="Portfolio Website" 
+                description="Persönliche Portfolio Website, open source." 
+                technologies={["React", "JavaScript"]} 
+                link="https://github.com/Ranelkin/portfolio-website" />
             </div>
           </div>
         </section>
 
-        <section id="leistungen" className="py-16 bg-white">
+        <section id="leistungen" className="py-16 bg-white/50">
           <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-8">Meine Leistungen</h3>
+            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Meine Leistungen</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
