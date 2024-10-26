@@ -4,6 +4,9 @@ import SkillsSection from './components/SkillsSection';
 import CopyToClipboard from './components/CopyToClipboard';
 import Project from './components/Project';
 import { siGithub, siLinkedin} from 'simple-icons';
+import Service from './components/Service';
+import WorkExperience from './components/WorkExperience';
+
 const App = () => {
   
 
@@ -14,7 +17,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
           <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ranel Karimov</h1>
           <div className="flex gap-6">
-            {['projekte', 'leistungen', 'erfahrung', 'kontakt'].map(item => (
+            {['Projekte', 'Leistungen', 'Erfahrung', 'Kontakt'].map(item => (
               <a href={`#${item}`} className="relative hover:text-blue-600 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">{item}</a>
             ))}
           </div>
@@ -54,7 +57,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projekte" className="py-16 bg-white/50 backdrop-blur-sm">
+        <section id="Projekte" className="py-16 bg-white/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Aktuelle Projekte</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -70,65 +73,41 @@ const App = () => {
           </div>
         </section>
 
-        <section id="leistungen" className="py-16 bg-white/50">
+        <section id="Leistungen" className="py-16 bg-white/50">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Meine Leistungen</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <Code className="w-6 h-6 text-blue-600" />
-                  <h4 className="font-bold">Webentwicklung</h4>
-                </div>
-                <p className="text-gray-600">Entwicklung moderner, responsiver Webseiten und Webanwendungen mit React und JavaScript</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <Database className="w-6 h-6 text-blue-600" />
-                  <h4 className="font-bold">Prozessautomatisierung</h4>
-                </div>
-                <p className="text-gray-600">Entwicklung und Optimierung von Skripten und Software für Prozessautomatisierung</p>
-              </div>
+              <Service title="Webentwicklung" description="Entwicklung moderner, responsiver Webseiten und Webanwendungen mit React und JavaScript" icon={<Code className="w-6 h-6 text-blue-600"/>}/>
+              <Service title="Prozessautomatisierung" description="Entwicklung und Optimierung von Skripten und Software für Prozessautomatisierung" icon={<Database className="w-6 h-6 text-blue-600"/>}/>
             </div>
           </div>
         </section>
 
-        <section id="erfahrung" className="py-16 bg-gray-50">
+        <section id="Erfahrung" className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8">Berufliche Erfahrung</h3>
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex justify-between mb-2">
-                  <h4 className="font-bold">Web Entwickler</h4>
-                  <span className="text-gray-600">Okt 2024 - Heute</span>
-                </div>
-                <p className="text-gray-600">Entwicklung einer Online-Lernplattform für Studierende an der Goethe Universität</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex justify-between mb-2">
-                  <h4 className="font-bold">ETL-Entwickler (Werkstudent)</h4>
-                  <span className="text-gray-600">Mai 2024 - Sep 2024</span>
-                </div>
-                <p className="text-gray-600">ING DiBa - Weiterentwicklung und Optimierung von ETL-Prozessen und Datenbankdesign</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex justify-between mb-2">
-                  <h4 className="font-bold">Tutor für Datenbanken</h4>
-                  <span className="text-gray-600">Mai 2024 - Jul 2024</span>
-                </div>
-                <p className="text-gray-600">Goethe Universität - Übungsleitung und Betreuung für Studierende im Modul "Programmierung von Datenbanken"</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div className="flex justify-between mb-2">
-                  <h4 className="font-bold">ETL-Entwickler (Praktikum)</h4>
-                  <span className="text-gray-600">Aug 2023 - Dez 2023</span>
-                </div>
-                <p className="text-gray-600">ING DiBa - ETL-Pipeline Entwicklung, SQL-Entwicklung und Datenbankdesign</p>
-              </div>
+              <WorkExperience 
+              positionTitle="Web Entwickler" 
+              duration="Okt 2024 - Heute" 
+              description={"Entwicklung einer Online-Lernplattform für Studierende an der Goethe Universität"} />
+              <WorkExperience 
+              positionTitle="ETL-Entwickler Werkstudent" 
+              duration="Mai 2024 - Sep 2024" 
+              description={"ING DiBa - Weiterentwicklung und Optimierung von ETL-Prozessen und Datenbankdesign"} />
+              <WorkExperience 
+              positionTitle="Tutor für Datenbankentwicklung" 
+              duration="Mai 2024 - Jul 2024" 
+              description={"Goethe Universität - Übungsleitung und Betreuung für Studierende im Modul 'Programmierung von Datenbanken'"} />
+              <WorkExperience 
+              positionTitle="ETL-Entwickler Praktikum" 
+              duration="Aug 2023 - Dez 2023" 
+              description={"ING DiBa - ETL-Pipeline Entwicklung, SQL-Entwicklung und Datenbankdesign"} />
             </div>
           </div>
         </section>
 
-        <section id="skills" className="py-16 bg-white">
+        <section id="Skills" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8">Fertigkeiten & Kentnisse</h3>
             <div className="space-y-6">
@@ -143,7 +122,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="kontakt" className="py-16 bg-gray-50">
+        <section id="Kontakt" className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h3 className="text-2xl font-bold mb-4">Kontakt</h3>
             <div className="flex items-center justify-center gap-2">
