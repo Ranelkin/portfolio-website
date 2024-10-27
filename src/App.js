@@ -6,27 +6,29 @@ import Project from './components/Project';
 import { siGithub, siLinkedin} from 'simple-icons';
 import Service from './components/Service';
 import WorkExperience from './components/WorkExperience';
+import DarkModeToggle from './components/DarkModeToggle';
 
 const App = () => {
   
 
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 scroll-smooth">
-      <nav className="fixed w-full bg-white/80 backdrop-blur-sm shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ranel Karimov</h1>
-          <div className="flex gap-6">
-            {['Projekte', 'Leistungen', 'Erfahrung', 'Kontakt'].map(item => (
-              <a href={`#${item}`} className="relative hover:text-blue-600 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">{item}</a>
-            ))}
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 scroll-smooth">
+    <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg z-50">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ranel Karimov</h1>
+        <div className="hidden md:flex items-center gap-6">
+          {['Projekte', 'Leistungen', 'Erfahrung', 'Kontakt'].map(item => (
+            <a href={`#${item}`} className="relative hover:text-blue-600 dark:text-gray-200 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform">{item}</a>
+          ))}
+          <DarkModeToggle /> 
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <main className="pt-16">
-        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-20">
-          <div className="max-w-6xl mx-auto px-4 text-center">
+      <main className="pt-16 dark:text-black-200">
+      <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 py-20">
+          <div className="max-w-6xl mx-auto px-4 text-center dark:text-white">
             <h2 className="text-4xl font-bold mb-4">Informatikstudent</h2>
             <p className="text-gray-600 mb-6">an der Goethe Universität Frankfurt</p>
             <div className="flex justify-center gap-4">
@@ -57,7 +59,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="Projekte" className="py-16 bg-white/50 backdrop-blur-sm">
+        <section id="Projekte" className="py-16 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Aktuelle Projekte</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -73,7 +75,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="Leistungen" className="py-16 bg-white/50">
+        <section id="Leistungen" className="py-16 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Meine Leistungen</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -83,7 +85,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="Erfahrung" className="py-16 bg-gray-50">
+        <section id="Erfahrung" className="py-16 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8">Berufliche Erfahrung</h3>
             <div className="space-y-6">
@@ -93,8 +95,11 @@ const App = () => {
               description={"Entwicklung einer Online-Lernplattform für Studierende an der Goethe Universität"} />
               <WorkExperience 
               positionTitle="ETL-Entwickler Werkstudent" 
-              duration="Mai 2024 - Sep 2024" 
-              description={"ING DiBa - Weiterentwicklung und Optimierung von ETL-Prozessen und Datenbankdesign"} />
+              duration="Mär 2024 - Sep 2024" 
+              description="ING DiBa - Data and Reporting Solutions
+              • Entwicklung von ETL-Jobs
+              • SQL-Entwicklung und Performancetuning
+              • Problemanalyse und Behandlung" />
               <WorkExperience 
               positionTitle="Tutor für Datenbankentwicklung" 
               duration="Mai 2024 - Jul 2024" 
@@ -102,12 +107,18 @@ const App = () => {
               <WorkExperience 
               positionTitle="ETL-Entwickler Praktikum" 
               duration="Aug 2023 - Dez 2023" 
-              description={"ING DiBa - ETL-Pipeline Entwicklung, SQL-Entwicklung und Datenbankdesign"} />
+              description="ING DiBa - Data and Reporting Solutions
+              • ETL-Pipeline-Entwicklung und Prozessautomatisierung
+              • Datenbankentwicklung und Performance-Optimierung
+              • Entwicklung mit SQL und SAS
+              • SCRUM / Agile Software Development in internationalem Umfeld
+              • Planung und Umsetzung von Software-Projekten
+              • Implementierung automatisierter Fehlerbenachrichtigung für ETL-Prozesse" />
             </div>
           </div>
         </section>
 
-        <section id="Skills" className="py-16 bg-white">
+        <section id="Skills" className="py-16 bg-white dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-bold mb-8">Fertigkeiten & Kentnisse</h3>
             <div className="space-y-6">
@@ -122,7 +133,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="Kontakt" className="py-16 bg-gray-50">
+        <section id="Kontakt" className="py-16 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h3 className="text-2xl font-bold mb-4">Kontakt</h3>
             <div className="flex items-center justify-center gap-2">
