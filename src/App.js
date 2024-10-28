@@ -71,6 +71,10 @@ const App = () => {
                 description="Persönliche Portfolio Website, open source." 
                 technologies={["React", "JavaScript"]} 
                 link="https://github.com/Ranelkin/portfolio-website" />
+              <Project title="Machine Learning Algorithmen"
+                description="Implementierungen von verschiedenen Machine Learning Algorithmen"
+                technologies={["Python", "Numpy", "sklearn"]}
+                link="https://github.com/Ranelkin/Machine-Learning-Algorithms" />
             </div>
           </div>
         </section>
