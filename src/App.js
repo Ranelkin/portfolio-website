@@ -87,7 +87,7 @@ const App = () => {
 
         <section id="Erfahrung" className="py-16 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-8">Berufliche Erfahrung</h3>
+            <h3 className="text-2xl font-bold mb-8 dark:text-white">Berufliche Erfahrung</h3>
             <div className="space-y-6">
               <WorkExperience 
               positionTitle="Web Entwickler" 
@@ -120,7 +120,7 @@ const App = () => {
 
         <section id="Skills" className="py-16 bg-white dark:bg-gray-900/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-8">Fertigkeiten & Kentnisse</h3>
+            <h3 className="text-2xl font-bold mb-8 dark:text-white">Fertigkeiten & Kentnisse</h3>
             <div className="space-y-6">
               <div>
                 <SkillsSection title="Programmiersprachen & Tools" skills={['Python', 'SQL', 'C++', 'JavaScript', 'Java', 'React']} />
@@ -134,7 +134,7 @@ const App = () => {
         </section>
 
         <section id="Kontakt" className="py-16 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto px-4 text-center dark:text-white">
             <h3 className="text-2xl font-bold mb-4">Kontakt</h3>
             <div className="flex items-center justify-center gap-2">
               <CopyToClipboard text="ranelkin@icloud.com" title="Email kopieren"/>
