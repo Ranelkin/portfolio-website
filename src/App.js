@@ -7,12 +7,17 @@ import { siGithub, siLinkedin} from 'simple-icons';
 import Service from './components/Service';
 import WorkExperience from './components/WorkExperience';
 import DarkModeToggle from './components/DarkModeToggle';
-
+import { Helmet } from 'react-helmet';
 const App = () => {
   
 
   
   return (
+    <>
+    <Helmet>
+        <title>Ranel Karimov - Informatikstudent</title>
+        <meta name="description" content="Portfolio von Ranel Karimov - Webentwickler und ETL-Entwickler" />
+    </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 scroll-smooth">
     <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -148,6 +153,7 @@ const App = () => {
         </section>
       </main>
     </div>
+    </>
   );
 };
 
