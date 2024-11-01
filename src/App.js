@@ -8,17 +8,19 @@ import Service from './components/Service';
 import WorkExperience from './components/WorkExperience';
 import DarkModeToggle from './components/DarkModeToggle';
 import { Helmet } from 'react-helmet';
-const App = () => {
-  
 
-  
+
+
+const App = () => {
+
   return (
     <>
     <Helmet>
         <title>Ranel Karimov - Informatikstudent</title>
         <meta name="description" content="Portfolio von Ranel Karimov - Webentwickler und ETL-Entwickler" />
     </Helmet>
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 scroll-smooth">
+    
+    <div className="animate-[slideUp_0.5s_ease-out] min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 scroll-smooth">
     <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ranel Karimov</h1>
@@ -32,10 +34,10 @@ const App = () => {
     </nav>
 
       <main className="pt-16 dark:text-black-200">
-      <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 py-20">
-          <div className="max-w-6xl mx-auto px-4 text-center dark:text-white">
+      <section className="bg-gradient-to-r text-white from-indigo-400 to-fuchsia-500 dark:from-indigo-600 dark:to-purple-800 py-20">
+          <div className="max-w-6xl mx-auto px-4 text-center  dark:text-white">
             <h2 className="text-4xl font-bold mb-4">Informatikstudent</h2>
-            <p className="text-gray-600 mb-6">an der Goethe Universität Frankfurt</p>
+            <p className="text-white/80 dark:text-white/70 mb-6">an der Goethe Universität Frankfurt</p>
             <div className="flex justify-center gap-4">
               <a href="https://github.com/ranelkin" target="_blank" rel="noopener noreferrer">
               <svg 
