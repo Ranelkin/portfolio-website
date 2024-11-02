@@ -1,14 +1,13 @@
 import React from 'react';
-import { Mail, Code, Database} from 'lucide-react';
+import { Mail } from 'lucide-react';
 import SkillsSection from './components/SkillsSection';
 import CopyToClipboard from './components/CopyToClipboard';
 import Project from './components/Project';
 import { siGithub, siLinkedin} from 'simple-icons';
-import Service from './components/Service';
+import ServiceSection from './components/ServiceSection';
 import WorkExperience from './components/WorkExperience';
 import DarkModeToggle from './components/DarkModeToggle';
 import { Helmet } from 'react-helmet';
-
 
 
 const App = () => {
@@ -87,13 +86,7 @@ const App = () => {
         </section>
 
         <section id="Leistungen" className="py-16 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Meine Leistungen</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Service title="Webentwicklung" description="Entwicklung moderner, responsiver Webseiten und Webanwendungen mit React und JavaScript" icon={<Code className="w-6 h-6 text-blue-600"/>}/>
-              <Service title="Prozessautomatisierung" description="Entwicklung und Optimierung von Skripten und Software für Prozessautomatisierung" icon={<Database className="w-6 h-6 text-blue-600"/>}/>
-            </div>
-          </div>
+          <ServiceSection />
         </section>
 
         <section id="Erfahrung" className="py-16 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm">
